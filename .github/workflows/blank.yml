@@ -1,2 +1,9 @@
-- name: PHPCodeSniffer
-  uses: rtCamp/action-phpcs-inspection@v1.0.0
+name: Main workflow
+on: [push]
+jobs:
+  Ubuntu:
+    name: Run Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+    - name: Step 1
+      run: echo Run step 1
