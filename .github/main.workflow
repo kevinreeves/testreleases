@@ -11,10 +11,10 @@ action "Run phpcs inspection" {
 }
 
 workflow "PHP Linting" {
-  resolves = ["Execute"]
-  on = "pull_request"
+  resolves = ["Run phplink inspection"]
+  on = "push"
 }
 
-action "Execute" {
+action "Run phplink inspection" {
   uses = "michaelw90/php-lint@master"
 }
