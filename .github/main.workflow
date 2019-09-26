@@ -9,3 +9,12 @@ action "Run phpcs inspection" {
     DIFF_BASE="master"
   }
 }
+
+workflow "PHP Linting" {
+  resolves = ["Execute"]
+  on = "pull_request"
+}
+
+action "Execute" {
+  uses = "michaelw90/php-lint@master"
+}
