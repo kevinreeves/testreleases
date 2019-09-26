@@ -1,9 +1,11 @@
 name: Main Workflow
 on: [push]
 jobs:
-  PHPCS:
-    name: Psalm - Code quality tool for PHP
+  Psalm code quality:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: mickaelandrieu/psalm-ga@v1.1
+    - name: Psalm - Code quality tool for PHP
+      uses: mickaelandrieu/psalm-ga@v1.1
+      with:
+        args: --root=classes/
