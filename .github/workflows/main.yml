@@ -1,0 +1,7 @@
+name: Main Workflow
+on: [push]
+jobs:
+  PHPCS:
+    name: Run PHPCS
+    runs-on: ubuntu-latest
+    uses: rtCamp/action-phpcs-inspection@v1.0.0
