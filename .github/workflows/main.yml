@@ -5,6 +5,5 @@ jobs:
     name: Run PHPCS
     runs-on: ubuntu-latest
     steps:
-    - uses: rtCamp/action-phpcs-code-review@v1.0.0
-      with:
-        secrets: ${{ secrets.BOT_TOKEN }}
+    - uses: actions/checkout@v1
+    - uses: rtCamp/action-phpcs-inspection@v1.0.0
