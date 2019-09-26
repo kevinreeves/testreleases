@@ -4,4 +4,5 @@ jobs:
   PHPCS:
     name: Run PHPCS
     runs-on: ubuntu-latest
-    uses: rtCamp/action-phpcs-inspection@v1.0.0
+    steps:
+    - uses: rtCamp/action-phpcs-inspection@v1.0.0
