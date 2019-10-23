@@ -1,2 +1,5 @@
 name: "Check Readme"
 description: "Check readme is modified when new files added"
+runs:
+  uses: 'sh'
+  main: 'checkreadme.sh'
