@@ -30,7 +30,7 @@ jobs:
         fi
 
     - name: Optionally comment
-      if: $DO_PR_COMMENT -eq 1
+      if: ${{ $DO_PR_COMMENT -eq 1 }}
       run: echo "CAN leave a PR comment here"
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
