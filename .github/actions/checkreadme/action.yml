@@ -2,4 +2,5 @@ name: "Check Readme"
 description: "Check readme is modified when new files added"
 runs:
   using: 'docker'
+  image: 'docker://ubuntu-latest'
   main: 'main.sh'
