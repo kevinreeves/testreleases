@@ -10,17 +10,15 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - name: Install dependencies
-      run: composer install --prefer-dist --no-progress --no-suggest
+    # - name: Install dependencies
+    # run: composer install --prefer-dist --no-progress --no-suggest
 
-    - name: Run phpcs
-      run: ./vendor/bin/phpcs
-
-    - name: Fetch develop branch
-      run: git fetch git@github.com:kevinreeves/testreleases.git
+    # - name: Run phpcs
+    # run: ./vendor/bin/phpcs
 
     - name: Require readme change for new classes
       run: |
+        git fetch
         NEW_FILES=$(git diff --name-status ${{ github.head_ref }}..${{ github.base_ref }} | grep '^A' | wc -l)
         if [[ ${NEW_FILES} -gt 0 ]]; then
             # see if README is updated
