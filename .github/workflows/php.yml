@@ -16,9 +16,11 @@ jobs:
     # - name: Run phpcs
     # run: ./vendor/bin/phpcs
 
+    - name: Get other branches
+      run: git fetch
+
     - name: Require readme change for new classes
       run: |
-        git fetch
         NEW_FILES=$(git diff --name-status ${{ github.head_ref }}..${{ github.base_ref }} | grep '^A' | wc -l)
         if [[ ${NEW_FILES} -gt 0 ]]; then
             # see if README is updated
