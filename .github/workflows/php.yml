@@ -16,6 +16,9 @@ jobs:
     - name: Run phpcs
       run: ./vendor/bin/phpcs
 
+    - name: Fetch develop branch
+      run: git fetch git@github.com:kevinreeves/testreleases.git
+
     - name: Require readme change for new classes
       run: |
         NEW_FILES=$(git diff --name-status ${{ github.head_ref }}..${{ github.base_ref }} | grep '^A' | wc -l)
