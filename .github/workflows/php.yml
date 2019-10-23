@@ -17,7 +17,7 @@ jobs:
     # run: ./vendor/bin/phpcs
 
     - name: Require readme change for new classes
-      uses: ./.github/actions/checkreadme.sh
+      uses: ./.github/actions/checkreadme
 
     #- name: Optionally comment
     #  if: ${{ $DO_PR_COMMENT -eq 1 }}
