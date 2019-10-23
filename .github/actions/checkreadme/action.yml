@@ -3,4 +3,4 @@ description: "Check readme is modified when new files added"
 runs:
   using: 'docker'
   image: 'docker://ubuntu-latest'
-  main: 'main.sh'
+  main: 'sh .github/actions/checkreadme/main.sh'
