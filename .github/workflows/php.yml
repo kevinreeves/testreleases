@@ -29,9 +29,9 @@ jobs:
             fi
         fi
 
-    - name: Optionally comment
-      if: ${{ $DO_PR_COMMENT -eq 1 }}
-      run: echo "CAN leave a PR comment here"
+    #- name: Optionally comment
+    #  if: ${{ $DO_PR_COMMENT -eq 1 }}
+    #  run: echo "CAN leave a PR comment here"
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
