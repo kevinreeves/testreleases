@@ -1,8 +1,6 @@
 <?php
 
-print "foo";
-
-function foo()
+public function foo()
 {
     if (true) {
         print "here";
