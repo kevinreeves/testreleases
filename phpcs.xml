@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<ruleset name="Networx Coding Standards">
+
+    <!-- Limit standards enforcement to certain directories during introduction. -->
+    <file>classes</file>
+
+    <!-- Exclude 3rd party code from standards enforcement. -->
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+
+   <!-- Configure default output style. -->
+    <arg name="report" value="summary"/>
+    <arg name="colors"/>
+    <arg value="p"/>
+
+    <!-- Begin with vanilla PSR2 Standard, temporarily excluding specific sniffs
+         due to scope of refactoring required to conform to standard. -->
+    <rule ref="PSR2">
+    </rule>
+
+</ruleset>
