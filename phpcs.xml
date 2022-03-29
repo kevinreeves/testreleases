@@ -15,7 +15,7 @@
 
     <!-- Begin with vanilla PSR2 Standard, temporarily excluding specific sniffs
          due to scope of refactoring required to conform to standard. -->
-    <rule ref="PSR2">
+    <rule ref="PSR1">
     </rule>
 
 </ruleset>
